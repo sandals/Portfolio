@@ -1,0 +1,8 @@
+=link_to 'New Shot', new_shot_path
+%hr
+%h1 All Shots
+%hr
+- @shots.each do |shot|
+  %div
+    =shot.title
+    =image_tag shot.image.url, class: 'shot__image'
