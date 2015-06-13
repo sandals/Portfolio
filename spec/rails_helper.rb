@@ -57,4 +57,7 @@ RSpec.configure do |config|
   config.after :each do
     Warden.test_reset!
   end
+  config.after :suite do
+    FileUtils.rm_rf(Dir["#{Rails.root}/spec/test_files/"])
+  end
 end

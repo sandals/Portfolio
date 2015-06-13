@@ -5,4 +5,4 @@
 - @shots.each do |shot|
   %div
     =shot.title
-    =image_tag shot.image.url, class: 'shot__image'
+    =image_tag shot.image.url(:medium), class: 'shot__image'
